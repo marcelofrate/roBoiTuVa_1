@@ -1,58 +1,88 @@
-# RoBoiTuva
+# 🤖 RoBoiTuva: Guia de Iniciação à Robótica EV3
 
-O projeto visa viabilizar o ensino de robótica e programação tanto para os alunos do IFSP Campus de Boituva quanto para os membros interessados da comunidade.
+O projeto visa viabilizar o ensino de robótica e programação tanto para os alunos do **IFSP Campus de Boituva** quanto para os membros interessados da comunidade, focando na plataforma **LEGO EV3** utilizando **MicroPython**.
 
-## Visão geral
+---
 
-Neste manual você encontrará tudo o que você precisa para dar os seus primeiros passos no mundo da programação e robótica.
-Iremos instalar os softwares que utilizaremos durante os enconstros presenciais e tutoriais que estão no nosso canal oficial e no canal dos instrutores.
+## 🧭 Visão Geral e Sumário
 
-## Pré-requisitos
+Neste guia você encontrará um passo a passo detalhado para configurar o ambiente de desenvolvimento. Iremos instalar os softwares que utilizaremos durante os encontros presenciais e tutoriais disponíveis em nosso canal oficial.
 
-Realize o download das seguintes ferramentas e arquivos:
+### 📝 Conteúdo
 
-- [Visual Studio Code](https://code.visualstudio.com/download) (VSCode)
-- [Balena Etcher](https://etcher.balena.io/#download-etcher) (Etcher)
-- [EV3 MicroPython micro SD card image](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3/) (Firmware oficial que permite a utilização de MicroPython no EV3)
+* [Pré-requisitos](#-pr%C3%A9-requisitos)
+* [Instalação do Firmware (Micro SD)](#-instala%C3%A7%C3%A3o-do-firmware-micro-sd)
+* [Pós-instalação (Configuração do VSCode)](#-p%C3%B3s-instala%C3%A7%C3%A3o-configura%C3%A7%C3%A3o-do-vscode)
+* [Autores](#-autores)
+* [Licença](#-licen%C3%A7a)
 
+---
 
-## Instalação
+## ⬇️ Pré-requisitos
 
-Instale o Visual Studio Code e o Balena Etcher em seu computador.
+Realize o download das seguintes ferramentas e arquivos essenciais:
 
-Caso tenha alguma dificuldade ou não esteja se sentindo tão confiante assista ao vídeo que gravamos o passo a passo.
+| Ferramenta | Descrição | Download |
+| :--- | :--- | :---: |
+| **Visual Studio Code (VSCode)** | Editor de código-fonte. | [![Download VSCode](https://img.shields.io/badge/Download-VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/download) |
+| **Balena Etcher** | Utilitário para gravação de imagens em mídias USB/SD. | [![Download Etcher](https://img.shields.io/badge/Download-Etcher-007ACC?style=for-the-badge&logo=etcher&logoColor=white)](https://etcher.balena.io/#download-etcher) |
+| **EV3 MicroPython Firmware** | Imagem oficial para Micro SD que permite o uso de MicroPython no bloco EV3. | [![Download Firmware](https://img.shields.io/badge/Download-Firmware-F77800?style=for-the-badge&logo=lego&logoColor=black)](https://education.lego.com/en-us/product-resources/mindstorms-ev3/teacher-resources/python-for-ev3/) |
 
-- [Tutorial de Instalação dos Softwares Necessaŕios](https://)
+---
 
-Com todos os softwares instalados iremos extrair o arquivo zip que baixamos contendo o firmware do bloco EV3.
-Após a extração você terá um arquivo **.iso**, utilizaremos esse arquivo no Etcher.
+## 💿 Instalação do Firmware (Micro SD)
 
-Plugue o micro SD ao computador utilizando um adaptador.
+### Passo 1: Instalação Inicial dos Softwares
 
-Abra o Etcher clique na opção *Flash from file* e selecione o arquivo *.iso* que acabou de extrair, após isso clique em *Select target* e escolha o micro SD e por último clique em *Flash* e aguarde a instalação. Quando o processo terminar, remova o micro SD do computador e insira-o no EV3.
-Com o micro SD dentro do bloco, ligue-o e aguarde a inicialização do sistema operacional, durante o processo de boot você notará que os leds do bloco estarão piscando em laranja e haverá bastante texto no visor, isso é normal.
+1.  Instale o **Visual Studio Code** e o **Balena Etcher** em seu computador.
+   
+### Passo 2: Gravação da Imagem no Micro SD
 
-## Pós-instalação
+1.  **Extraia o arquivo zip** do firmware que foi baixado. Você terá um arquivo com a extensão `.iso`.
+2.  Plugue o Micro SD ao computador usando um adaptador.
+3.  Abra o **Balena Etcher**:
+    * Clique em *Flash from file* e selecione o arquivo `.iso` que você acabou de extrair.
+    * Clique em *Select target* e escolha o seu cartão Micro SD.
+    * Clique em *Flash* e aguarde a conclusão da instalação.
+4.  Após a conclusão, remova o Micro SD do computador e insira-o no bloco **EV3**.
 
-Após a instalação dos programas necessários e do firmware no bloco EV3 iremos realizar a instalação de uma extensão no VSCode chamada LEGO® MINDSTORMS® EV3 MicroPython.
+### Passo 3: Inicialização do EV3
 
-Clique no link abaixo para ir até a página oficial da extensão.
+1.  Ligue o bloco EV3.
+2.  Aguarde a inicialização do sistema operacional. Durante o processo de *boot*, os LEDs do bloco piscarão em laranja e haverá bastante texto no visor — **isso é normal**.
 
-- [Extensão LEGO MIDSTORMS](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
+---
 
-Com a extensão instalada e o EV3 ligado iremos conectá-lo ao computador através de um cabo usb.
-O dispositivo será reconhecido no computador e no VSCode, a partir disso poderemos iniciar o desenvolvimento dos programas em código MicroPython.
+## 💻 Pós-instalação (Configuração do VSCode)
 
-## Autores
+Após a instalação do firmware, o próximo passo é configurar o ambiente de desenvolvimento no VSCode para comunicação com o EV3:
 
-- Marcelo Frate - Professor Doutor - [Lattes](http://lattes.cnpq.br/8632724748282199)
-- Emerson J. - Monitor de Robótica e Programador - [LinkedIn](https://www.linkedin.com/in/%C3%A9merson-j%C3%BAnior-a3b216214/)
-- Mateus de Melo - Programador - [LinkedIn](https://www.linkedin.com/in/mateusdemelo/)
+1.  Instale a extensão oficial **LEGO® MINDSTORMS® EV3 MicroPython** no VSCode.
+    * [Link direto para a Extensão](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython)
 
-## Licença
+2.  Com a extensão instalada e o EV3 ligado, conecte-o ao computador através de um **cabo USB**.
+3.  O dispositivo será reconhecido no computador e, consequentemente, no VSCode. A partir desse momento, você poderá iniciar o desenvolvimento dos programas em **MicroPython**.
 
-Este projeto está licenciado sob a licença [MIT](https://mit-license.org/)
+---
 
-## Agradecimentos
+## 👥 Autores
 
-  - Agradecemos a todos os participantes do projeto e a todos aqueles que foram beneficiados de alguma forma com os trabalhos que desenvolvemos.
+| Nome | Função | Links |
+| :--- | :--- | :--- |
+| **Marcelo Frate** | Professor Doutor | [Lattes](http://lattes.cnpq.br/8632724748282199) |
+| **Emerson J.** | Monitor de Robótica e Programador | [LinkedIn](https://www.linkedin.com/in/%C3%A9merson-j%C3%BAnior-a3b216214/) |
+| **Mateus de Melo** | Programador | [LinkedIn](https://www.linkedin.com/in/mateusdemelo/) |
+
+---
+
+## 🛡️ Licença
+
+Este projeto está licenciado sob a Licença MIT.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://mit-license.org/)
+
+## 🙏 Agradecimentos
+
+Agradecemos a todos os participantes do projeto e a todos aqueles que foram beneficiados de alguma forma com os trabalhos que desenvolvemos.
+
+---
